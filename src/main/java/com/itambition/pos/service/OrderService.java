@@ -1,13 +1,9 @@
-package com.ITAmbition.Version1.Service;
+package com.itambition.pos.service;
 
-import com.ITAmbition.Version1.Entity.ItemEnitiy;
-import com.ITAmbition.Version1.Entity.OrderEnitiy;
-import com.ITAmbition.Version1.Entity.OrderID;
-import com.ITAmbition.Version1.Repository.ItemRepo;
-import com.ITAmbition.Version1.Repository.OrderRepo;
+import com.itambition.pos.repository.OrderRepo;
+import com.itambition.pos.entity.OrderEnitiy;
+import com.itambition.pos.entity.OrderID;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

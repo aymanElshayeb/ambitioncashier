@@ -1,4 +1,4 @@
-package com.ITAmbition.Version1.Entity;
+package com.itambition.pos.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

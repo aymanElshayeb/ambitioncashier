@@ -1,17 +1,11 @@
-package com.ITAmbition.Version1.Service;
+package com.itambition.pos.service;
 
-import com.ITAmbition.Version1.Entity.OrderEnitiy;
+import com.itambition.pos.entity.OrderEnitiy;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.io.InputStream;
 import java.util.HashMap;
