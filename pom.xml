@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.itambition.pos</groupId>
-	<artifactId>casher</artifactId>
+	<artifactId>cashier</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cashier</name>
 	<description>it ambition cashier system</description>
