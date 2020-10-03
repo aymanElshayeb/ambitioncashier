@@ -1,6 +1,6 @@
-package com.ITAmbition.Version1.Repository;
+package com.itambition.pos.repository;
 
-import com.ITAmbition.Version1.Entity.ItemEnitiy;
+import com.itambition.pos.entity.ItemEnitiy;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

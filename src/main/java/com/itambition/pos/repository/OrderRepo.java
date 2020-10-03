@@ -1,10 +1,9 @@
-package com.ITAmbition.Version1.Repository;
+package com.itambition.pos.repository;
 
-import com.ITAmbition.Version1.Entity.OrderEnitiy;
-import com.ITAmbition.Version1.Entity.OrderID;
+import com.itambition.pos.entity.OrderEnitiy;
+import com.itambition.pos.entity.OrderID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
