@@ -1,7 +1,7 @@
-package com.ITAmbition.Version1.Service;
+package com.itambition.pos.service;
 
-import com.ITAmbition.Version1.Entity.CategoryEntity;
-import com.ITAmbition.Version1.Repository.CategoryRepo;
+import com.itambition.pos.repository.CategoryRepo;
+import com.itambition.pos.entity.CategoryEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

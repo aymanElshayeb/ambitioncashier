@@ -1,5 +1,5 @@
-package com.ITAmbition.Version1.Repository;
-import com.ITAmbition.Version1.Entity.SubCategoryEntity;
+package com.itambition.pos.repository;
+import com.itambition.pos.entity.SubCategoryEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

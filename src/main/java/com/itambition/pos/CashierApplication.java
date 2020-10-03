@@ -1,8 +1,8 @@
-package com.ITAmbition.Version1;
+package com.itambition.pos;
 
-import com.ITAmbition.Version1.Entity.ItemEnitiy;
-import com.ITAmbition.Version1.Repository.ItemRepo;
-import com.ITAmbition.Version1.Service.reportitemservice;
+import com.itambition.pos.entity.ItemEnitiy;
+import com.itambition.pos.repository.ItemRepo;
+import com.itambition.pos.service.ReportItemService;
 import net.sf.jasperreports.engine.JRException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -16,11 +16,11 @@ import java.util.List;
 
 @SpringBootApplication
 @RestController
-public class Version1Application {
+public class CashierApplication {
     @Autowired
     private ItemRepo repository;
     @Autowired
-    private reportitemservice service;
+    private ReportItemService service;
 
     @GetMapping("/getEmployees")
     public List<ItemEnitiy> getEmployees() {
@@ -34,6 +34,6 @@ public class Version1Application {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Version1Application.class, args);
+        SpringApplication.run(CashierApplication.class, args);
     }
 }

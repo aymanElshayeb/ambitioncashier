@@ -1,4 +1,4 @@
-package com.ITAmbition.Version1;
+package com.itambition.pos.entity;
 
 import lombok.Builder;
 import lombok.Data;
