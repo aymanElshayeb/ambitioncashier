@@ -12,8 +12,8 @@ import java.sql.Timestamp;
 
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 @Builder
 @Entity
 @Table(name="Orders")
@@ -35,19 +35,18 @@ public class OrderEnitiy {
     private long total_price;
 
 
-//    public OrderEnitiy(int order_id, long item_id, String name, long barcode, Timestamp dateTime, int quantity, long unit_price, long total_price) {
-//        this.order_id = order_id;
-//        this.item_id = item_id;
-//        this.name = name;
-//        this.barcode = barcode;
-//        this.dateTime = dateTime;
-//        this.quantity = quantity;
-//        this.unit_price = unit_price;
-//        this.total_price = total_price;
-//    }
-//
-//    public OrderEnitiy() {
-//    }
+    public OrderEnitiy(OrderID order_id ,String name, long barcode, Timestamp dateTime, int quantity, long unit_price, long total_price) {
+        this.order_id = order_id;
+        this.name = name;
+        this.barcode = barcode;
+        this.dateTime = dateTime;
+        this.quantity = quantity;
+        this.unit_price = unit_price;
+        this.total_price = total_price;
+    }
+    //
+    public OrderEnitiy() {
+    }
 //
 //    public int getOrder_id() {
 //        return order_id;
