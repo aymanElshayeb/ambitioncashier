@@ -9,7 +9,6 @@ import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Builder
 @Entity
 @Table(name = "SubCategories")
@@ -26,7 +25,19 @@ public class SubCategoryEntity {
     @JoinColumn(name = "category_id")
     private CategoryEntity category;
 
-//    public SubCategoryEntity(int subCategory_id, String name, CategoryEntity category) {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCategory(CategoryEntity category) {
+        this.category = category;
+    }
+
+    public int getSubCategory_id() {
+        return subCategory_id;
+    }
+
+    //    public SubCategoryEntity(int subCategory_id, String name, CategoryEntity category) {
 //        this.subCategory_id = subCategory_id;
 //        this.name = name;
 //        this.category = category;
@@ -42,7 +53,12 @@ public class SubCategoryEntity {
 //    public void setSubCategory_id(int subCategory_id) {
 //        this.subCategory_id = subCategory_id;
 //    }
-//
+
+    public void setSubCategory_id(int subCategory_id) {
+        this.subCategory_id = subCategory_id;
+    }
+
+    //
     public String getName() {
         return name;
     }

@@ -35,7 +35,8 @@ public class OrderEnitiy {
     private long total_price;
 
 
-//    public OrderEnitiy(int order_id, long item_id, String name, long barcode, Timestamp dateTime, int quantity, long unit_price, long total_price) {
+
+    //    public OrderEnitiy(int order_id, long item_id, String name, long barcode, Timestamp dateTime, int quantity, long unit_price, long total_price) {
 //        this.order_id = order_id;
 //        this.item_id = item_id;
 //        this.name = name;

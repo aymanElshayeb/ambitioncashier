@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
 
 
@@ -20,9 +18,19 @@ public class CategoryEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int category_id;
     @Column(nullable = false)
+
     private String name;
 
-//    public CateogryEntity(int category_id, String name) {
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCategory_id(int category_id) {
+        this.category_id = category_id;
+    }
+
+    //    public CateogryEntity(int category_id, String name) {
 //        this.category_id = category_id;
 //        this.name = name;
 //    }
