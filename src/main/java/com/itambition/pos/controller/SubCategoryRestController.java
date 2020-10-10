@@ -17,29 +17,29 @@ public class SubCategoryRestController {
     private SubCategoryRepo SCRepo;
 
 
-    @GetMapping("/items")
+    @GetMapping("/subcategory")
     List<SubCategoryEntity> all(){
         return SCRepo.findAll();
     }
 
-    @PostMapping("/items")
+    @PostMapping("/subcategory")
     SubCategoryEntity newItem(@RequestBody SubCategoryEntity e) {
         return SCRepo.save(e);
 
     }
 
-    @GetMapping("/items/{id}")
+    @GetMapping("/subcategory/{id}")
     Optional<SubCategoryEntity> getOneItem(@PathVariable int path){
 
         return SCRepo.findById(path);
     }
 
-    @DeleteMapping("/items/{id}")
+    @DeleteMapping("/subcategory/{id}")
     void deleteItem(@PathVariable int path){
         SCRepo.deleteById(path);
     }
 
-    @PutMapping("/items/{id}")
+    @PutMapping("/subcategory/{id}")
     SubCategoryEntity editItem(@RequestBody SubCategoryEntity e,@PathVariable int path){
 
 

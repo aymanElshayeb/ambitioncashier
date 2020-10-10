@@ -10,6 +10,8 @@ public class AddPageController {
 
     @GetMapping("/add")
     public String AddPage(){
+
+
         return "addpage";
     }
 }
