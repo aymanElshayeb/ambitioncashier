@@ -2,7 +2,6 @@ package com.itambition.pos.service;
 
 import com.itambition.pos.repository.OrderRepo;
 import com.itambition.pos.entity.OrderEnitiy;
-import com.itambition.pos.entity.OrderID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,15 +21,15 @@ public class OrderService {
         return orders;
     }
 
-    public OrderEnitiy getOrder(OrderID id) {
+    public OrderEnitiy getOrder(int id) {
         return orderRepo.findById(id).get();
     }
 
-    public List<OrderEnitiy> getOrder(int id) {
-        List<OrderEnitiy> orders = new ArrayList<OrderEnitiy>();
-        orderRepo.findByorder_id(id).forEach(orders::add);
-        return orders;
-    }
+//    public List<OrderEnitiy> getOrder(int id) {
+//        List<OrderEnitiy> orders = new ArrayList<OrderEnitiy>();
+//        orderRepo.findByorder_id(id).forEach(orders::add);
+//        return orders;
+//    }
 
     public void addOrder(OrderEnitiy category) {
         orderRepo.save(category);
@@ -40,7 +39,7 @@ public class OrderService {
         orderRepo.save(category);
     }
 
-    public void deleteOrder(OrderID id) {
+    public void deleteOrder(int id) {
         orderRepo.deleteById(id);
     }
 }

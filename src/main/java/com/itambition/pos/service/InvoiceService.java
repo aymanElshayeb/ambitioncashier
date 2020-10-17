@@ -1,6 +1,7 @@
 package com.itambition.pos.service;
 
 import com.itambition.pos.entity.OrderEnitiy;
+import com.itambition.pos.entity.OrderItemEntity;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
@@ -17,7 +18,7 @@ import java.util.Map;
 public class InvoiceService {
 
 
-    public void createPdfReport(final List<OrderEnitiy> orderEnitiys ,String invoice_template , int order_id, String logo_path,String lang , String filePath) throws JRException {
+    public void createPdfReport(final List<OrderItemEntity> orderEnitiys , String invoice_template , int order_id, String logo_path, String lang , String filePath) throws JRException {
         final JasperReport invoice = load_invoice_template(invoice_template);
 
         ///////////////////////////////////////////////////////////////////////////
