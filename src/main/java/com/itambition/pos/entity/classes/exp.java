@@ -1,4 +1,4 @@
-package com.itambition.pos.entity;
+package com.itambition.pos.entity.classes;
 
 import lombok.Builder;
 import lombok.Data;
@@ -13,20 +13,15 @@ public class exp {
     public long barcode;
     public float price;
     public int quantity;
-    public    String subCategory;
+    public String subCategory;
 
-    public  String name_cat;
-    public exp(int item_id, String name, long barcode, float price, int quantity, String sub, String cat){
-        this.item_id=item_id;
+    public String name_cat;
+    public exp(String name, long barcode, float price, int quantity, String sub, String cat){
         this.name=name;
         this.barcode=barcode;
         this.price=price;
         this.quantity=quantity;
         this.subCategory=sub;
         this.name_cat=cat;
-
     }
-
-
-
 }

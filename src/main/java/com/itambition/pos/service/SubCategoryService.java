@@ -19,20 +19,4 @@ public class SubCategoryService {
         subCategoryRepo.findAll().forEach(subcategories::add);
         return subcategories;
     }
-
-    public SubCategoryEntity getSubCategory(int id) {
-        return subCategoryRepo.findById(id).get();
-    }
-
-    public void addSubCategory(SubCategoryEntity subcategory) {
-        subCategoryRepo.save(subcategory);
-    }
-
-    public void updateSubCategory(String id, SubCategoryEntity subcategory) {
-        subCategoryRepo.save(subcategory);
-    }
-
-    public void deleteSubCategory(int id) {
-        subCategoryRepo.deleteById(id);
-    }
 }
