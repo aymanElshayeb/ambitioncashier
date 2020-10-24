@@ -13,9 +13,9 @@
     <property name="com.jaspersoft.studio.unit.columnSpacing" value="mm"/>
     <parameter name="logo" class="java.io.InputStream"/>
     <parameter name="order_id" class="java.lang.Integer"/>
-    <field name="dateTime" class="java.util.Date">
-        <fieldDescription><![CDATA[dateTime]]></fieldDescription>
-    </field>
+<!--    <field name="dateTime" class="java.util.Date">-->
+<!--        <fieldDescription><![CDATA[dateTime]]></fieldDescription>-->
+<!--    </field>-->
     <field name="name" class="java.lang.String">
         <fieldDescription><![CDATA[name]]></fieldDescription>
     </field>
@@ -53,13 +53,13 @@
                 <reportElement x="34" y="3" width="116" height="30" uuid="4e1d8806-38e9-4661-bcb3-d8d0b3436975"/>
                 <imageExpression><![CDATA[$P{logo}]]></imageExpression>
             </image>
-            <textField>
-                <reportElement x="47" y="59" width="107" height="11" uuid="7dd7e1bf-2b0b-44ab-9794-4c8c074c2678"/>
-                <textElement>
-                    <font size="7"/>
-                </textElement>
-                <textFieldExpression><![CDATA[$F{dateTime}]]></textFieldExpression>
-            </textField>
+<!--            <textField>-->
+<!--                <reportElement x="47" y="59" width="107" height="11" uuid="7dd7e1bf-2b0b-44ab-9794-4c8c074c2678"/>-->
+<!--                <textElement>-->
+<!--                    <font size="7"/>-->
+<!--                </textElement>-->
+<!--                <textFieldExpression><![CDATA[$F{dateTime}]]></textFieldExpression>-->
+<!--            </textField>-->
             <textField>
                 <reportElement x="3" y="41" width="39" height="11" uuid="ded28d8f-b755-4020-920a-fee45766135e"/>
                 <textElement>
