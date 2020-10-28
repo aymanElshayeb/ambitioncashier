@@ -8,11 +8,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 @Builder
-
-
 @Entity
 @Table(name = "Categories")
 public class CategoryEntity {
@@ -22,27 +20,27 @@ public class CategoryEntity {
     @Column(nullable = false)
     private String name;
 
-//    public CateogryEntity(int category_id, String name) {
-//        this.category_id = category_id;
-//        this.name = name;
-//    }
-//
-//    public CateogryEntity() {
-//    }
-//
-//    public int getCategory_id() {
-//        return category_id;
-//    }
-//
-//    public void setCategory_id(int category_id) {
-//        this.category_id = category_id;
-//    }
-//
+    public CategoryEntity(int category_id, String name) {
+        this.category_id = category_id;
+        this.name = name;
+    }
+
+    public CategoryEntity() {
+    }
+
+    public int getCategory_id() {
+        return category_id;
+    }
+
+    public void setCategory_id(int category_id) {
+        this.category_id = category_id;
+    }
+
     public String getName() {
         return name;
     }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

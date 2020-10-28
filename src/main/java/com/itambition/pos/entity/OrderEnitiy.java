@@ -21,13 +21,12 @@ public class OrderEnitiy {
     @Column(nullable = false)
     private long total_price;
 
-
+    public OrderEnitiy() {
+    }
     public OrderEnitiy(int order_id , Timestamp dateTime,long total_price) {
         this.order_id = order_id;
         this.dateTime = dateTime;
         this.total_price = total_price;
-    }
-    public OrderEnitiy() {
     }
 
     public int getOrder_id() {

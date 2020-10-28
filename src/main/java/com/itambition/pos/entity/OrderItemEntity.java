@@ -28,6 +28,9 @@ public class OrderItemEntity {
     @JoinColumn(name = "order_id")
     private OrderEnitiy orderEnitiy;
 
+    public OrderItemEntity() {
+    }
+
     public OrderItemEntity(int id, String name, long barcode, int quantity, long unit_price, long total_price, OrderEnitiy orderEnitiy) {
         this.id = id;
         this.name = name;
@@ -36,9 +39,6 @@ public class OrderItemEntity {
         this.unit_price = unit_price;
         this.total_price = total_price;
         this.orderEnitiy = orderEnitiy;
-    }
-
-    public OrderItemEntity() {
     }
 
     public int getId() {

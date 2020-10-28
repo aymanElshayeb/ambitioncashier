@@ -11,4 +11,8 @@ import java.util.List;
 public interface ItemRepo extends JpaRepository<ItemEnitiy,Integer> {
     @Query("FROM ItemEnitiy WHERE item_id=?1 ")
     List <ItemEnitiy>findbyiddd(int id);
+
+    @Query(" FROM ItemEnitiy WHERE quantity=0 ")
+    List<ItemEnitiy> Noinstock ();
+
 }

@@ -19,21 +19,8 @@ public class ItemService {
         itemRepo.findAll().forEach(items::add);
         return items;
     }
-
-    public ItemEnitiy getItem(int id) {
-        return itemRepo.findById(id).get();
-    }
-
-    public void addItem(ItemEnitiy category) {
-        itemRepo.save(category);
-    }
-
-    public void updateCategory(String id, ItemEnitiy category) {
-        itemRepo.save(category);
-    }
-
-    public void deleteCategory(int id) {
-        itemRepo.deleteById(id);
+    public List<ItemEnitiy> nostock() {
+        return itemRepo.Noinstock();
     }
 
 }
