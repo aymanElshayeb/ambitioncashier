@@ -6,20 +6,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.UUID;
 
 @Data
-//@NoArgsConstructor
-//@AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "Items")
-public class ItemEnitiy {
+public class ItemEnitiy implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int item_id;
-    @Column(nullable = false)
+    @GeneratedValue
+    private UUID item_id;
+    @Column(nullable = false,unique=true)
     private String name;
-    @Column(nullable = false)
+    @Column(nullable = false,unique=true)
     private long barcode;
     @Column(nullable = false)
     private float price;
@@ -33,7 +32,7 @@ public class ItemEnitiy {
     public ItemEnitiy() {
     }
 
-    public ItemEnitiy(int item_id, String name, long barcode, float price, int quantity, SubCategoryEntity subCategory) {
+    public ItemEnitiy(UUID item_id, String name, long barcode, float price, int quantity, SubCategoryEntity subCategory) {
         this.item_id = item_id;
         this.name = name;
         this.barcode = barcode;
@@ -42,11 +41,19 @@ public class ItemEnitiy {
         this.subCategory = subCategory;
     }
 
-    public int getItem_id() {
+    public ItemEnitiy(String name, long barcode, float price, int quantity, SubCategoryEntity subCategory) {
+        this.name = name;
+        this.barcode = barcode;
+        this.price = price;
+        this.quantity = quantity;
+        this.subCategory = subCategory;
+    }
+
+    public UUID getItem_id() {
         return item_id;
     }
 
-    public void setItem_id(int item_id) {
+    public void setItem_id(UUID item_id) {
         this.item_id = item_id;
     }
 

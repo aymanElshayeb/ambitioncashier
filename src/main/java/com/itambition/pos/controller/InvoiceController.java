@@ -1,7 +1,6 @@
 package com.itambition.pos.controller;
 
 import com.itambition.pos.entity.OrderEnitiy;
-import com.itambition.pos.entity.OrderID;
 import com.itambition.pos.repository.OrderItemRepo;
 import com.itambition.pos.service.InvoiceService;
 import com.itambition.pos.service.OrderItemService;

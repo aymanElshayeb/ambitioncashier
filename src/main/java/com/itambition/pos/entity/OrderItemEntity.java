@@ -4,15 +4,17 @@ import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.UUID;
 
 @Data
 @Builder
 @Entity
 @Table(name="OrdersItems")
-public class OrderItemEntity {
-    @Id()
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+public class OrderItemEntity implements Serializable {
+    @Id
+    @GeneratedValue
+    private UUID id;
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
@@ -20,7 +22,7 @@ public class OrderItemEntity {
     @Column(nullable = false)
     private int quantity;
     @Column(nullable = false)
-    private long unit_price;
+    private float unit_price;
     @Column(nullable = false)
     private long total_price;
 
@@ -31,7 +33,7 @@ public class OrderItemEntity {
     public OrderItemEntity() {
     }
 
-    public OrderItemEntity(int id, String name, long barcode, int quantity, long unit_price, long total_price, OrderEnitiy orderEnitiy) {
+    public OrderItemEntity(UUID id, String name, long barcode, int quantity, float unit_price, long total_price, OrderEnitiy orderEnitiy) {
         this.id = id;
         this.name = name;
         this.barcode = barcode;
@@ -40,13 +42,16 @@ public class OrderItemEntity {
         this.total_price = total_price;
         this.orderEnitiy = orderEnitiy;
     }
-
-    public int getId() {
-        return id;
+    public OrderItemEntity(String name, long barcode, int quantity, float unit_price, long total_price, OrderEnitiy orderEnitiy) {
+        this.name = name;
+        this.barcode = barcode;
+        this.quantity = quantity;
+        this.unit_price = unit_price;
+        this.total_price = total_price;
+        this.orderEnitiy = orderEnitiy;
     }
-
-    public void setId(int id) {
-        this.id = id;
+    public UUID getId() {
+        return id;
     }
 
     public String getName() {
@@ -73,11 +78,11 @@ public class OrderItemEntity {
         this.quantity = quantity;
     }
 
-    public long getUnit_price() {
+    public float getUnit_price() {
         return unit_price;
     }
 
-    public void setUnit_price(long unit_price) {
+    public void setUnit_price(float unit_price) {
         this.unit_price = unit_price;
     }
 

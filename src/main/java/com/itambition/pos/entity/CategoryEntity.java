@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.UUID;
 
 @Data
 //@NoArgsConstructor
@@ -13,33 +15,35 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(name = "Categories")
-public class CategoryEntity {
+public class CategoryEntity implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int category_id;
-    @Column(nullable = false)
+    @GeneratedValue
+//    @GeneratedValue(generator = UUID)
+    private UUID category_id;
+    @Column(nullable = false,unique=true)
     private String name;
 
-    public CategoryEntity(int category_id, String name) {
+    public CategoryEntity(UUID category_id, String name) {
         this.category_id = category_id;
         this.name = name;
     }
-
+    public CategoryEntity( String name) {
+        this.name = name;
+    }
     public CategoryEntity() {
     }
 
-    public int getCategory_id() {
+    public UUID getCategory_id() {
         return category_id;
     }
 
-    public void setCategory_id(int category_id) {
+    public void setCategory_id(UUID category_id) {
         this.category_id = category_id;
     }
 
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }

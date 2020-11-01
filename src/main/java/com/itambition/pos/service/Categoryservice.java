@@ -19,4 +19,20 @@ public class Categoryservice {
         categoryRepo.findAll().forEach(categories::add);
         return categories;
     }
+
+
+    public CategoryEntity update(String name ,String Newname ) {
+        CategoryEntity categoryEntity = categoryRepo.findByName(name);
+        categoryEntity.setName(Newname);
+        return categoryRepo.save(categoryEntity);
+    }
+
+    public void deleteAll() {
+        categoryRepo.deleteAll();
+    }
+
+    public void delete(String name) {
+        CategoryEntity categoryEntity = categoryRepo.findByName(name);
+        categoryRepo.delete(categoryEntity);
+    }
 }

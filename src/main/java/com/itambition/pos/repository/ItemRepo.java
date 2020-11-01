@@ -9,6 +9,9 @@ import java.util.List;
 
 @Repository
 public interface ItemRepo extends JpaRepository<ItemEnitiy,Integer> {
+    @Query("FROM ItemEnitiy WHERE barcode=?1 ")
+    ItemEnitiy findByBarcode(long id);
+
     @Query("FROM ItemEnitiy WHERE item_id=?1 ")
     List <ItemEnitiy>findbyiddd(int id);
 

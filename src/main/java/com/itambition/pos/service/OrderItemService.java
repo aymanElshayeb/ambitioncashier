@@ -19,4 +19,11 @@ public class OrderItemService {
         return items;
     }
 
+    public List<OrderItemEntity> getAllitems() {
+        List<OrderItemEntity> items = new ArrayList<OrderItemEntity>();
+        orderItemRepo.findAll().forEach(items::add);
+        return items;
+    }
+
+
 }

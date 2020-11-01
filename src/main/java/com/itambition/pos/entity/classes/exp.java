@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@Builder
+//@Builder
 public class exp {
     public int item_id;
     public String name;

@@ -6,47 +6,37 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.UUID;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+//@Builder
 @Entity
 @Table(name = "SubCategories")
 
-public class SubCategoryEntity {
+public class SubCategoryEntity implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int subCategory_id;
-    @Column(nullable = false)
+    @GeneratedValue
+    private UUID subCategory_id;
+    @Column(nullable = false,unique=true)
     private String name;
 
-//    fetch = FetchType.LAZY, optional = false
     @ManyToOne()
     @JoinColumn(name = "category_id")
     private CategoryEntity category;
 
-    public SubCategoryEntity() {
-    }
+    public SubCategoryEntity() {}
 
-    public SubCategoryEntity(int subCategory_id, String name, CategoryEntity category) {
-        this.subCategory_id = subCategory_id;
+    public SubCategoryEntity(String name, CategoryEntity category) {
         this.name = name;
         this.category = category;
     }
 
-    public int getSubCategory_id() {
-        return subCategory_id;
-    }
-
-    public void setSubCategory_id(int subCategory_id) {
-        this.subCategory_id = subCategory_id;
-    }
+    public UUID getSubCategory_id() {return subCategory_id; }
 
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -54,7 +44,6 @@ public class SubCategoryEntity {
     public CategoryEntity getCategory() {
         return category;
     }
-
     public void setCategory(CategoryEntity category) {
         this.category = category;
     }
